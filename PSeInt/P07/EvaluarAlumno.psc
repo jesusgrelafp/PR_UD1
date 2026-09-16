@@ -10,11 +10,11 @@ Algoritmo EvaluarAlumno
     Escribir "Introduce el porcentaje de asistencia (0-100):"
     Leer asistencia
     
-    Escribir "¿Ha entregado el trabajo final? (SI/NO):"
+    Escribir "Â¿Ha entregado el trabajo final? (SI/NO):"
     Leer respuesta
     
     // Validar respuesta del trabajo
-    Si Mayusculas(respuesta) = "SI" Entonces
+    Si Mayusculas(respuesta) == "SI" Entonces
         trabajoEntregado <- Verdadero
     Sino
         trabajoEntregado <- Falso
