@@ -1,10 +1,10 @@
 Algoritmo sonIguales
     Definir num1, num2 Como Entero
     
-    Escribir "Introduce dos números"
+    Escribir "Introduce dos nÃºmeros"
     Leer num1, num2
     
-    Si num1 = num2 Entonces
+    Si num1 == num2 Entonces
         Escribir num1, " = ", num2
     Sino
         Si num1 > num2 Entonces
