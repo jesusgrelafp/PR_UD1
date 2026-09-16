@@ -1,12 +1,12 @@
 Algoritmo esPar
     Definir num Como Entero
     
-    Escribir "Introduce un número"
+    Escribir "Introduce un nÃºmero"
     Leer num
     
-    Si num % 2 = 0 Entonces
-        Escribir "El número ", num, " es PAR"
+    Si num % 2 == 0 Entonces
+        Escribir "El nÃºmero ", num, " es PAR"
     Sino
-        Escribir "El número ", num, " es IMPAR"
+        Escribir "El nÃºmero ", num, " es IMPAR"
     FinSi
 FinAlgoritmo
