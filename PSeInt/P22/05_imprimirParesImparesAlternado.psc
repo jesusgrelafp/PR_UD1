@@ -1,10 +1,7 @@
 Algoritmo imprimirParesImparesAlternado
     Definir contador Como Entero
-    
-    contador <- 0
-    
-    Mientras contador < 20 Hacer
-        Escribir contador + 1
-        contador <- contador + 1
-    FinMientras
+
+    Para contador <- 1 Hasta 20 Con Paso 1 Hacer
+        Escribir contador
+    FinPara
 FinAlgoritmo

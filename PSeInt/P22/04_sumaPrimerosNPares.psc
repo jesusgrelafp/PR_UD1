@@ -1,17 +1,15 @@
 Algoritmo sumaPrimerosNPares
     Definir n, contador, parActual, suma Como Entero
-    
+
     Escribir "Introduce la cantidad de números pares (N):"
     Leer n
-    
-    contador <- 0
+
     suma <- 0
-    
-    Mientras contador < n Hacer
-        parActual <- (contador + 1) * 2
+
+    Para contador <- 1 Hasta n Con Paso 1 Hacer
+        parActual <- contador * 2
         suma <- suma + parActual
-        contador <- contador + 1
-    FinMientras
-    
+    FinPara
+
     Escribir "La suma de los primeros ", n, " números pares es: ", suma
 FinAlgoritmo

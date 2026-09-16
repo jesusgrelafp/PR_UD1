@@ -1,16 +1,14 @@
 Algoritmo sumarCincoNumeros
     Definir contador Como Entero
     Definir num, suma Como Real
-    
-    contador <- 0
+
     suma <- 0
-    
-    Mientras contador < 5 Hacer
-        Escribir "Introduce un número (", contador + 1, "/5):"
+
+    Para contador <- 1 Hasta 5 Con Paso 1 Hacer
+        Escribir "Introduce un número (", contador, "/5):"
         Leer num
         suma <- suma + num
-        contador <- contador + 1
-    FinMientras
-    
+    FinPara
+
     Escribir "La suma total es: ", suma
 FinAlgoritmo

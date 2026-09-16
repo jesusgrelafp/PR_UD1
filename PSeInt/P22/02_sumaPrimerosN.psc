@@ -1,16 +1,14 @@
 Algoritmo sumaPrimerosN
     Definir n, contador, suma Como Entero
-    
+
     Escribir "Introduce el valor de N:"
     Leer n
-    
-    contador <- 0
+
     suma <- 0
-    
-    Mientras contador < n Hacer
-        suma <- suma + (contador + 1)
-        contador <- contador + 1
-    FinMientras
-    
+
+    Para contador <- 1 Hasta n Con Paso 1 Hacer
+        suma <- suma + contador
+    FinPara
+
     Escribir "La suma de los primeros ", n, " números naturales es: ", suma
 FinAlgoritmo
