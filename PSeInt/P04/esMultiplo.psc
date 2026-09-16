@@ -4,9 +4,9 @@ Algoritmo esMultiplo
     Escribir "Introduce N y M"
     Leer numN, numM
     
-    Si numN % numM = 0 Entonces
-        Escribir "El número ", numN, " es divisible entre ", numM
+    Si numN % numM == 0 Entonces
+        Escribir "El nÃºmero ", numN, " es divisible entre ", numM
     Sino
-        Escribir "El número ", numN, " NO es divisible entre ", numM
+        Escribir "El nÃºmero ", numN, " NO es divisible entre ", numM
     FinSi
 FinAlgoritmo
