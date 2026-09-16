@@ -1,7 +1,6 @@
 Algoritmo EvaluarAlumno
-    Definir nota, asistencia Como Real
-    Definir trabajoEntregado Como Logico
-    Definir respuesta Como Cadena
+    Definir nota, asistencia Como Entero
+    Definir presentaTrabajo Como Texto
     
     // Lectura de datos
     Escribir "Introduce la nota final (0-10):"
@@ -10,18 +9,11 @@ Algoritmo EvaluarAlumno
     Escribir "Introduce el porcentaje de asistencia (0-100):"
     Leer asistencia
     
-    Escribir "¿Ha entregado el trabajo final? (SI/NO):"
-    Leer respuesta
+    Escribir "¿Ha entregado el trabajo final? (S/N):"
+    Leer presentaTrabajo
     
-    // Validar respuesta del trabajo
-    Si Mayusculas(respuesta) == "SI" Entonces
-        trabajoEntregado <- Verdadero
-    Sino
-        trabajoEntregado <- Falso
-    FinSi
-    
-    // Comprobar condiciones de aprobado
-    Si nota >= 5 Y asistencia >= 80 Y trabajoEntregado Entonces
+      // Comprobar condiciones de aprobado
+    Si nota >= 5 Y asistencia >= 80 Y presentaTrabajo == "S" Entonces
         Escribir "El alumno aprueba"
     Sino
         Escribir "El alumno no aprueba"
