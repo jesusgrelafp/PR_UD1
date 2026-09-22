@@ -5,6 +5,8 @@ Algoritmo calculaPuntuacion
 	
 	VALOR_SALIDA <- 0    
     total <- 0
+
+    Escribir "Introduzca la puntuación: "
     Leer puntuacion
     
     Mientras puntuacion <> VALOR_SALIDA Hacer
