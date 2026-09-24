@@ -1,33 +1,32 @@
-Algoritmo verificarNumeroOrdenado
-    Definir num, numAux, digitoDerecha, digitoIzquierda Como Entero
+Algoritmo verificarNnumeroOrdenado
+    Definir num, digito, digitoAnterior Como Entero
     Definir ordenado Como Logico
     
-    Escribir "Introduce un número:"
+    Escribir "Introduce un nÃºmero:"
     Leer num
     
-    numAux <- Abs(num)
+    num <- Abs(num)
     ordenado <- Verdadero
     
-    Si numAux >= 10 Entonces
-        digitoDerecha <- numAux % 10
-        numAux <- Trunc(numAux / 10)
-        
-        Mientras numAux > 0 Y ordenado = Verdadero Hacer
-            digitoIzquierda <- numAux % 10
-            
-            // Si el dígito de la izquierda es mayor o igual, no está ordenado
-            Si digitoIzquierda >= digitoDerecha Entonces
-                ordenado <- Falso
-            Sino
-                digitoDerecha <- digitoIzquierda
-                numAux <- Trunc(numAux / 10)
-            FinSi
-        FinMientras
-    FinSi
+    // Ãšltimo dÃ­gito (el de mÃ¡s a la derecha)
+    digitoAnterior <- num % 10
+    num <- trunc(num / 10)
     
-    Si ordenado = Verdadero Entonces
-        Escribir "El número está ordenado."
+    Mientras num > 0 Y ordenado Hacer
+        digito <- num % 10
+        
+        // El dÃ­gito de la izquierda debe ser estrictamente menor
+        Si digito >= digitoAnterior Entonces
+            ordenado <- Falso
+        FinSi
+        
+        digitoAnterior <- digito
+        num <- trunc(num / 10)
+    FinMientras
+    
+    Si ordenado Entonces
+        Escribir "El nÃºmero estÃ¡ ordenado."
     Sino
-        Escribir "El número NO está ordenado."
+        Escribir "El nÃºmero NO estÃ¡ ordenado."
     FinSi
 FinAlgoritmo
