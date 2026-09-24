@@ -1,32 +1,29 @@
-Algoritmo numeroOrdenado
-    Definir num, digito, digitoAnterior Como Entero
+Algoritmo verificarOrdenAscendente
+    Definir num, numAnterior Como Entero
     Definir ordenado Como Logico
     
-    Escribir "Introduce un número:"
+    Escribir "Introduce un número (0 para finalizar):"
     Leer num
     
-    num <- Abs(num)
     ordenado <- Verdadero
     
-    // Último dígito (el de más a la derecha)
-    digitoAnterior <- num % 10
-    num <- trunc(num / 10)
-    
-    Mientras num > 0 Y ordenado Hacer
-        digito <- num % 10
+    Si num <> 0 Entonces
+        numAnterior <- num
+        Leer num
         
-        // El dígito de la izquierda debe ser estrictamente menor
-        Si digito >= digitoAnterior Entonces
-            ordenado <- Falso
-        FinSi
-        
-        digitoAnterior <- digito
-        num <- trunc(num / 10)
-    FinMientras
+        Mientras num <> 0 Hacer
+            Si num < numAnterior Entonces
+                ordenado <- Falso
+            FinSi
+            
+            numAnterior <- num
+            Leer num
+        FinMientras
+    FinSi
     
-    Si ordenado Entonces
-        Escribir "El número está ordenado."
+    Si ordenado = Verdadero Entonces
+        Escribir "La serie de números está ordenada ascendentemente."
     Sino
-        Escribir "El número NO está ordenado."
+        Escribir "La serie de números NO está ordenada ascendentemente."
     FinSi
 FinAlgoritmo
