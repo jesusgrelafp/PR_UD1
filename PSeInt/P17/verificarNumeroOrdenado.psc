@@ -1,4 +1,4 @@
-Algoritmo verificarNnumeroOrdenado
+Algoritmo verificarNumeroOrdenado
     Definir num, digito, digitoAnterior Como Entero
     Definir ordenado Como Logico
     
